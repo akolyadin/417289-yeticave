@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Антон Колядин](https://up.htmlacademy.ru/php/5/user/417289).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
 
 ---
 
