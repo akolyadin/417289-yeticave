@@ -27,7 +27,7 @@ $user_avatar = 'img/user.jpg';
         <a class="main-header__add-lot button" href="add-lot.html">Добавить лот</a>
 
         <nav class="user-menu">            
-        <?php if ($is_auth ): ?>
+        <?php if ($is_auth): ?>
             <div class="user-menu__image">
                 <img src=<?=$user_avatar; ?> width="40" height="40" alt="Пользователь">
             </div>
@@ -143,15 +143,11 @@ $user_avatar = 'img/user.jpg';
     <nav class="nav">
         <ul class="nav__list container">
             <?php $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"]; ?>
-            <?php $index = 0;
-            while ($index < count($categories)) {
-                $cur_category = $categories[$index];
-                print ('<li class="nav__item">
-                    <a href="all-lots.html">' . $cur_category . '</a>
-                    </li>');
-                $index = $index + 1;
-
-            } ?>
+            <?php foreach ($categories as $key => $value): ?> 
+                <li class="nav__item">
+                    <a href="all-lots.html"><?=$value; ?></a>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </nav>
     <div class="main-footer__bottom container">
