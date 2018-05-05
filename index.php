@@ -77,6 +77,13 @@ $user_avatar = 'img/user.jpg';
         <div class="lots__header">
             <h2>Открытые лоты</h2>
         </div>
+        <?php function f_price_format ($price_value)
+            {
+                $price = number_format(ceil($price_value), 0, ',', ' ') ;
+                $price_value_format = $price .= '<b class="rub">р</b>';
+                return $price_value_format;
+            }
+        ?>
         <ul class="lots__list">
             <?php $ads = [
                 [
@@ -127,7 +134,7 @@ $user_avatar = 'img/user.jpg';
                         <div class="lot__state">
                             <div class="lot__rate">
                                 <span class="lot__amount">Стартовая цена</span>
-                                <span class="lot__cost"><?=$value['price']; ?><b class="rub">р</b></span>
+                                <span class="lot__cost"><?php print f_price_format($value['price'])?></span>
                             </div>
                             <div class="lot__timer timer">
                             </div>
