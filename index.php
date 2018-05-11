@@ -15,4 +15,3 @@ $layout = renderTemplate('templates/layout.php',
 ]);
 print($layout)
 
-?>
