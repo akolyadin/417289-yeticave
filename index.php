@@ -1,17 +1,21 @@
-<?php 
-require_once ('functions.php');
-require_once ('data.php');
+<?php
 
-$content = renderTemplate('templates/index.php', 
-    ['categories' => $categories, 
-    'ads' => $ads] );
+require_once 'functions.php';
+require_once 'data.php';
 
-$layout = renderTemplate('templates/layout.php', 
-    ['is_auth' => $is_auth, 
-    'title' => $title, 
+$content = render_template('index', [
+	'categories' => $categories, 
+    'ads' => $ads
+]);
+
+$layout = render_template('layout', [
+	'content' => $content,
+    'is_auth' => $is_auth, 
+    'page_title' => $page_title, 
     'user_name' => $user_name, 
     'user_avatar' => $user_avatar, 
     'categories' => $categories
+    
 ]);
-print($layout)
 
+print($layout);

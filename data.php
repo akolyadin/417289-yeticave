@@ -1,23 +1,55 @@
 <?php 
 
-	$is_auth = (bool) rand(0, 1);
+$is_auth = (bool) rand(0, 1);
 
-	$user_name = 'Константин';
-	$user_avatar = 'img/user.jpg';
+$user_name = 'Константин';
+$user_avatar = 'img/user.jpg';
 
-	$title = 'Главная';
+$page_title = 'Главная';
 
-    $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+$categories = 
+[
+    'boards' => 'Доски и лыжи',
+    'attachment' => 'Крепления',
+    'boots' => 'Ботинки',
+    'clothing'=> 'Одежда',
+    'tools' => 'Инструменты',
+    'others' => 'Разное'
+];
 
-    $ads['1'] = array('name' => '2014 Rossignol District Snowboard', 'ads_category' => $categories[0], 'price' => 10999, 'pic_link' => 'img/lot-1.jpg');
 
-    $ads['2'] = array('name' => 'DC Ply Mens 2016/2017 Snowboard', 'ads_category' => $categories[0], 'price' => 159999, 'pic_link' => 'img/lot-2.jpg');
 
-    $ads['3'] = array('name' => 'Крепления Union Contact Pro 2015 года размер L/XL', 'ads_category' => $categories[1], 'price' => 8000, 'pic_link' => 'img/lot-3.jpg');
-
-    $ads['4'] = array('name' => 'Ботинки для сноуборда DC Mutiny Charocal', 'ads_category' => $categories[2], 'price' => 10999, 'pic_link' => 'img/lot-4.jpg');
-        
-    $ads['5'] = array('name' => 'Куртка для сноуборда DC Mutiny Charocal', 'ads_category' => $categories[3], 'price' => 7500, 'pic_link' => 'img/lot-5.jpg');
-    
-    $ads['6'] = array('name' => 'Маска Oakley Canopy', 'ads_category' => $categories[5], 'price' => 5400, 'pic_link' => 'img/lot-6.jpg');
-?>
+$ads = 
+[
+    [
+        'ad_name' => '2014 Rossignol District Snowboard', 
+        'ad_category' => $categories['boards'],
+        'ad_price' => 10999, 
+        'ad_pic' => 'img/lot-1.jpg'
+    ], [
+        'ad_name' => 'DC Ply Mens 2016/2017 Snowboard', 
+        'ad_category' => $categories['boards'], 
+        'ad_price' => 159999, 
+        'ad_pic' => 'img/lot-2.jpg'
+    ], [
+        'ad_name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
+        'ad_category' => $categories['attachment'],
+        'ad_price' => 8000,
+        'ad_pic' => 'img/lot-3.jpg'
+    ], [
+        'ad_name' => 'Ботинки для сноуборда DC Mutiny Charocal',
+        'ad_category' => $categories['boots'],
+        'ad_price' => 10999, 
+        'ad_pic' => 'img/lot-4.jpg'
+    ], [
+        'ad_name' => 'Куртка для сноуборда DC Mutiny Charocal',
+        'ad_category' => $categories['clothing'],
+        'ad_price' => 7500,
+        'ad_pic' => 'img/lot-5.jpg'
+    ], [
+        'ad_name' => 'Маска Oakley Canopy', 
+        'ad_category' => $categories['others'], 
+        'ad_price' => 5400, 
+        'ad_pic' => 'img/lot-6.jpg'
+    ]
+];
