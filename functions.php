@@ -37,7 +37,7 @@ function render_template($file_name, $data) {
  * @return string - счетчик оставшегося времени Ч:М
  */
 function end_time($start_date = 'now', $days = 1) {
-	$date1 = date('Y-m-d h:i:s', (strtotime($days . 'days')));
+	$date1 = date('Y-m-d H:i:s', (strtotime($days . 'days')));
 	$date2 = date('Y-m-d 00:00:00', (strtotime($start_date)));
 	/** Не понимаю почему не работает!!! уже наверное все перепробовал*/
 	return date_diff($date1, $date2);
