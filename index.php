@@ -5,7 +5,7 @@ require_once 'data.php';
 
 $content = render_template('index', [
 	'categories' => $categories, 
-    'ads' => $ads
+	'ads' => $ads
 ]);
 
 $layout = render_template('layout', [

@@ -20,7 +20,7 @@
         <?php foreach ($ads as $ad): ?>
             <li class="lots__item lot">
                 <div class="lot__image">
-                    <img src="<?=$ad['ad_pic']; ?>" width="350" height="260" alt="<?= $category_name; ?>" alt="<?= $ad['ad_name']; ?>">
+                    <img src="<?=$ad['ad_pic']; ?>" width="350" height="260" alt="<?= $ad['ad_name']; ?>" alt="<?= $ad['ad_name']; ?>">
                 </div>
                 <div class="lot__info">
                     <span class="lot__category"><?= $ad['ad_category']; ?></span>
@@ -31,6 +31,7 @@
                             <span class="lot__cost"><?= price_format($ad['ad_price']) ?><b class="rub"> р</b></span>
                         </div>
                         <div class="lot__timer timer">
+                            <?= end_time(); ?>
                         </div>
                     </div>
                 </div>
