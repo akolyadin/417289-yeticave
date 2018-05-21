@@ -21,7 +21,7 @@ CREATE TABLE ads (
 CREATE TABLE categories (
 	id_category TINYINT AUTO_INCREMENT PRIMARY KEY,
 	category_name CHAR(64) NOT NULL,
-	category_name_eng CHAR(64) NOT NULL
+	category_name_alias CHAR(64) NOT NULL
 );
 
 CREATE TABLE bets (

@@ -1,4 +1,4 @@
-INSERT INTO categories (id_category, category_name, category_name_eng) 
+INSERT INTO categories (id_category, category_name, category_name_alias) 
 VALUES 
 	(1, 'Доски и лыжи', 'boards'),
 	(2, 'Крепления', 'attachment'),
