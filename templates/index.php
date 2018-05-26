@@ -5,7 +5,7 @@
 
         <?php foreach ($categories as $category): ?>
             <li class="promo__item promo__item--<?= $category_key; ?>">
-                <a class="promo__link" href="all-lots.html"><?= $category['category_name']; ?></a>
+                <a class="promo__link" href="all-lots.php?id_category=<?= htmlspecialchars($category['id_category']); ?>"><?= $category['category_name']; ?></a>
             </li>
         <?php endforeach; ?>
 
@@ -24,14 +24,14 @@
                 </div>
                 <div class="lot__info">
                     <span class="lot__category"><?= $ad['category_name']; ?></span>
-                    <h3 class="lot__title"><a class="text-link" href="lot.html"><?= $ad['ad_name']; ?></a></h3>
+                    <h3 class="lot__title"><a class="text-link" href="lot.php?id_ad=<?= htmlspecialchars($ad['id_ad']); ?>"><?= $ad['ad_name']; ?></a></h3>
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
                             <span class="lot__cost"><?= price_format($ad['ad_price']) ?><b class="rub"> р</b></span>
                         </div>
                         <div class="lot__timer timer">
-                            <?= end_time() ?>
+                            <?= end_time ($ad['ad_date_end']) ?>
                         </div>
                     </div>
                 </div>

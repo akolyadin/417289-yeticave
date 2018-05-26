@@ -3,25 +3,21 @@
 require_once 'functions.php';
 require_once 'data.php';
 
-$page_title = 'Главная';
-
 $categories = get_categories();
 
-$ads = get_ad();
+$page_title = 'Упс';
 
-
-$content = render_template('index', [
-	'categories' => $categories, 
-	'ads' => $ads
+$content_404 = render_template('error404', [
 ]);
 
 $layout = render_template('layout', [
-	'content' => $content,
+	'content' => $content_404,
     'is_auth' => $is_auth, 
     'page_title' => $page_title, 
     'user_name' => $user_name, 
     'user_avatar' => $user_avatar, 
-    'categories' => $categories
+    'categories' => $categories   
 ]);
+
 
 print($layout);
