@@ -12,7 +12,7 @@ CREATE TABLE ads (
 	ad_link CHAR(128) NOT NULL,
 	ad_price INT NOT NULL,
 	ad_date_end DATETIME NOT NULL,
-	ad_price_step INT,
+	ad_price_current INT,
 	user_create_id INT NOT NULL,
 	user_win_id INT,
 	category_id TINYINT NOT NULL
@@ -27,6 +27,7 @@ CREATE TABLE categories (
 CREATE TABLE bets (
 	id_bet INT AUTO_INCREMENT PRIMARY KEY,
 	bet_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+	bet_value int NOT NULL,
 	user_id INT NOT NULL,
 	ad_id INT NOT NULL
 );
